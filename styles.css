@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+:root {
+    --primary-red: hsl(0, 78%, 62%);
+    --primary-cyan: hsl(180, 62%, 55%);
+    --primary-orange: hsl(34, 97%, 64%);
+    --primary-blue: hsl(212, 86%, 64%);
+
+    --neutral-dark: hsl(234, 12%, 34%);
+    --neutral-grayblue: hsl(229, 6%, 66%);
+    --neutral-gray: hsl(0, 0%, 98%);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    font-size: 0.9375rem;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    background-color: var(--neutral-gray);
+}
+
+.main-container {
+    max-width: 69.375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.top-container {
+    text-align: center;
+    max-width: 33.75rem;
+}
+
+.top-container span,
+.top-container h1,
+.top-container p {
+    color: var(--neutral-dark);
+    font-size: 2.25rem;
+    font-weight: 300;
+    letter-spacing: 0.25px;
+    margin-bottom: 2px;
+}
+
+.top-container span {
+    color: var(--neutral-grayblue);
+}
+
+.top-container h1 {
+    font-weight: 600;
+    margin-bottom: 13px;
+}
+
+.top-container p {
+    color: var(--neutral-grayblue);
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0.104px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.card-supervisor {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 2;
+}
+
+.card-teambuild {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+}
+
+.card-karma {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 2;
+}
+
+.card-calculator {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 2;
+}
+
+.card {
+    border-radius: 8px;
+    background-color: #FFF;
+    box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.50);
+    padding: 1.75rem 2rem 2rem 2rem;
+}
+
+.card-supervisor {
+    border-top: 4px solid var(--primary-cyan);
+}
+
+.card-teambuild {
+    border-top: 4px solid var(--primary-red);
+}
+
+.card-calculator {
+    border-top: 4px solid var(--primary-blue);
+}
+
+.card-karma {
+    border-top: 4px solid var(--primary-orange);
+}
+
+.card h2 {
+    color: var(--neutral-dark);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.card p {
+    color: var(--neutral-grayblue);
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.09px;
+    margin-bottom: 40px;
+}
+
+.card img {
+    float: right;
+    width: 4rem;
+    height: 4rem;
+}
+
+
+@media screen and (max-width: 870px) {
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 30px;
+    }
+    
+    .card-supervisor {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+    }
+    
+    .card-teambuild {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+    }
+    
+    .card-karma {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+    
+    .card-calculator {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 25px;
+    }
+
+    .card-supervisor,
+    .card-teambuild,
+    .card-karma,
+    .card-calculator {
+        grid-column: 1 / span 1;
+    }
+    
+    .card-supervisor {
+        grid-row: 1 / span 1;
+    }
+    
+    .card-teambuild {
+        grid-row: 2 / span 1;
+    }
+    
+    .card-karma {
+        grid-row: 3 / span 1;
+    }
+    
+    .card-calculator {
+        grid-row: 4 / span 1;
+    }
+
+    .top-container span,
+    .top-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .main-container {
+        gap: 4.75rem;
+    }
+    
+    .card {
+        padding: 1.47rem 1.75rem 1.75rem 1.75rem;
+    }
+
+    .card h2 {
+        margin-bottom: 1px;
+    }
+
+    .card p {
+        margin-bottom: 33px;
+    }
+
+    .card img {
+        width: 3.56rem;
+        height: 3.56rem;
+    }
+}
